@@ -1,14 +1,42 @@
 i = 0 ;
-     imax = document.images.length - 1 ;
-     setTimeout(next, 2000) ;
+imax = document.images.length - 1 ;
+var time = setInterval(next, 3000);
+
 
      function next()
      {
      document.images[i].style.display = "none" ;
-     if ( i < imax )
+     if ( i < imax ) {
           i++;
-     else
+     }else {
           i=0;
+          }
      document.images[i].style.display = "block";
-     setTimeout(next, 2000) ;
+
      }
+
+      function clickNext()
+      {
+        document.images[i].style.display = "none" ;
+        if ( i < imax ){
+             i++;
+        }else {
+             i=0;
+          }
+        document.images[i].style.display = "block";
+        clearInterval(time);
+        time = setInterval(next, 3000);
+      }
+
+      function clickLast()
+      {
+        document.images[i].style.display = "none" ;
+        if ( i > 0 ){
+             i--;
+        }else {
+             i=imax;
+           }
+        document.images[i].style.display = "block";
+        clearInterval(time);
+        time = setInterval(next, 3000);
+      }

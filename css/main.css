@@ -98,9 +98,26 @@ textarea {
    ========================================================================== */
 
 
+   .left_button {
+   	position: absolute;
+   	height:50px;
+   	width:50px;
+    left:-17px;
+   	float:left;
+   }
 
+   .right_button {
+     height: 50px;
+    width: 50px;
+    float: right;
+    margin-top: auto;
+    margin-bottom: auto;
+   }
 
-
+   .slider {
+    	width:700px;
+      height: 437.5px
+   }
 
 
 
